@@ -11,9 +11,12 @@
   },
   "jest": {
     "testEnvironment": "jsdom",
-    "setupFilesAfterEnv": ["@testing-library/jest-dom/extend-expect"]
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-dom/extend-expect"
+    ]
   },
   "dependencies": {
+    "emoji-picker-react": "^4.12.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
