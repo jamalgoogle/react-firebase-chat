@@ -59,8 +59,6 @@
    }
 
    .center {
-
-
       /* Webkit browsers (Chrome, Safari, etc.) */
       &::-webkit-scrollbar {
          width: 8px;
@@ -90,7 +88,7 @@
 
       .message {
          display: flex;
-         max-width: 70%;
+         max-width: 100%;
          gap: 20px;
          padding: 20px;
 

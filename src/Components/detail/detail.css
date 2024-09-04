@@ -1,3 +1,125 @@
 .detail {
    flex: 1;
+   overflow: scroll;
+
+
+   
+      /* Webkit browsers (Chrome, Safari, etc.) */
+      &::-webkit-scrollbar {
+         width: 8px;
+      }
+
+      &::-webkit-scrollbar-track {
+         background: rgba(17, 25, 40, 0.5);
+         border-radius: 4px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+         background-color: rgba(255, 255, 255, 0.3);
+         border-radius: 4px;
+         transition: background-color 0.3s ease;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+         background-color: rgba(255, 255, 255, 0.5);
+      }
+
+
+
+   .user {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 20px;
+      gap: 10px;
+      margin-bottom: 20px;
+      border-bottom: solid 1px #ccc;
+
+      img {
+         width: 100px;
+         height: 100px;
+         border-radius: 50%;
+         object-fit: cover;
+      }
+   }
+
+   .info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+
+      .option {
+
+         .title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+
+            img {
+               width: 45px;
+               height: 45px;
+               background-color: rgba(17, 25, 40, 0.3);
+               padding: 10px;
+               border-radius: 50%;
+               cursor: pointer;
+            }
+         }
+      }
+
+      .photos {
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+         margin-top: 20px;
+
+         .PhotoItem {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .photoDetail {
+               img {
+                  width: 40px;
+                  height: 40px;
+               }
+
+               span {
+                  font-size: 14px;
+                  font-weight: 300;
+                  color: #d2d2d2;
+                  margin-left: 20px;
+               }
+            }
+
+            .icon {
+
+               width: 45px;
+               height: 45px;
+               background-color: rgba(17, 25, 40, 0.3);
+               padding: 10px;
+               border-radius: 50%;
+               cursor: pointer;
+
+            }
+         }
+      }
+   }
+   button {
+      width: 100%;
+      padding: 10px;
+      background-color: #a4000098;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+         background-color: #a40000;
+      }
+   }
+
 }

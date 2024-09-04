@@ -1,10 +1,20 @@
 import './chat.css'
 import EmojiBeaker from 'emoji-picker-react'
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
+
+
 
 function Chat() {
   const [open, setOpen] = useState(false)
   const [message, setMessage] = useState('')
+  const endOfMessagesRef = useRef(null)
+
+
+
+  useEffect(() => {
+    endOfMessagesRef.current?.scrollIntoView({ behavior: "smooth" })
+  }, [])
+
 
   const hangleEmoji = (e) => {
     setMessage((prev) => prev + e.emoji)
@@ -68,6 +78,10 @@ function Chat() {
             <span>1 min ago</span>
           </div>
         </div>
+        <div className="message own">
+          <div className='message-info' ref={endOfMessagesRef} />
+        </div>
+        
       </div>
 
       <div className="bottom">
